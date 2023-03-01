@@ -4,7 +4,7 @@ import { DisconnectReason, Server, Socket } from 'socket.io';
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
-    origin: 'http://127.0.0.1:5173',
+    origin: ['http://127.0.0.1:5173', 'http://jukrapopk.thddns.net:3662'],
     methods: ['GET', 'POST']
   }
 });
