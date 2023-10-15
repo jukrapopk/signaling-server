@@ -1,9 +1,11 @@
+import { createServer } from 'http';
 import { DisconnectReason, Server, Socket } from 'socket.io';
 
-const io = new Server({
+const httpServer = createServer();
+const io = new Server(httpServer, {
   cors: {
-    origin: "http://127.0.0.1:5173",
-    methods: ["GET", "POST"]
+    origin: 'http://127.0.0.1:5173',
+    methods: ['GET', 'POST']
   }
 });
 
@@ -41,4 +43,4 @@ io.on('connection', (socket) => {
   })
 });
 
-io.listen(3000);
+httpServer.listen(3000);
