@@ -1,0 +1,20 @@
+{
+  "name": "signaling-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.0",
+    "ws": "^8.12.0"
+  },
+  "scripts": {
+    "dev": "nodemon server.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/ws": "^8.5.4",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
